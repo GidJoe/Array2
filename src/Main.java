@@ -4,21 +4,29 @@ import java.util.Random;
 public class Main {
     public static void main(String[] args) {
 
+        /*
+        LF 6 / Programmierung II
+        Array, Aufgabensammlung
+        A04.01 Array Aufgabensammlung (2).pdf
+        Aufgabe 4
+        "Lottozahlen"
+        von M.W
+        */
+
         Random ran = new Random();
-        int x = 10 + ran.nextInt(49 - 1 + 1);
+        int x = 1 + ran.nextInt(49);
         int[] lottozahlen = new int[6];
         boolean[] unique = new boolean[50];
-        for (int i=0; i< unique.length; i++) {
+        for (int i = 0; i < unique.length; i++) {
             unique[i] = false;
         }
 
         for (int i = 0; i < 6; i++) {
 
             x = 1 + ran.nextInt(49);
-//            System.out.println(x);
-            while(unique[x] == true) {
+
+            while (unique[x]) {
                 x = 1 + ran.nextInt(49);
-//                System.out.println("while");
             }
             unique[x] = true;
             lottozahlen[i] = x;
