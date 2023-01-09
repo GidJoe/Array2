@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Random;
 
 public class Main {
@@ -32,7 +33,10 @@ public class Main {
             lottozahlen[i] = x;
             System.out.println((i + 1) + ". Ziehung : " + x);
 
+
         }
+        Arrays.sort(lottozahlen);
+        System.out.print(Arrays.toString(lottozahlen));
 
 
     }
